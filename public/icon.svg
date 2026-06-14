@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Background -->
+  <rect width="512" height="512" rx="112" fill="#2d2a2e"/>
+  <!-- Bullet bar track -->
+  <rect x="80" y="310" width="352" height="36" rx="6" fill="#403e41"/>
+  <!-- Bullet bar fill -->
+  <rect x="80" y="310" width="252" height="36" rx="6" fill="#a9dc76"/>
+  <!-- Target line -->
+  <rect x="292" y="300" width="8" height="56" rx="2" fill="#ffd866"/>
+  <!-- Checkmark -->
+  <polyline points="148,210 218,280 364,134" fill="none" stroke="#78dce8" stroke-width="52" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
