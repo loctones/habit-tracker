@@ -102,12 +102,20 @@ function SortableGoalRow({ goal, dispatch, onDelete }) {
                 onChange={(e) => setEmoji(e.target.value)}
                 placeholder="Emoji"
                 maxLength={2}
+                autoComplete="off"
+                autoCorrect="off"
+                autoCapitalize="off"
+                spellCheck="false"
                 style={{ ...editInput, width: 56 }}
               />
               <input
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 placeholder="Goal name"
+                autoComplete="off"
+                autoCorrect="off"
+                autoCapitalize="off"
+                spellCheck="false"
                 style={{ ...editInput, flex: 1 }}
               />
               <input
@@ -296,8 +304,8 @@ export default function SettingsScreen({ goals, dispatch, onBack }) {
       ) : (
         <div style={{ background: C.surface, border: `1px solid ${C.overlay}`, borderRadius: T.radius.md, padding: T.space.md, marginTop: T.space.sm }}>
           <div style={{ display: 'flex', gap: T.space.sm, marginBottom: T.space.sm }}>
-            <input value={newEmoji} onChange={(e) => setNewEmoji(e.target.value)} placeholder="Emoji" maxLength={2} style={{ ...editInput, width: 56 }} />
-            <input value={newName} onChange={(e) => setNewName(e.target.value)} placeholder="Goal name" style={{ ...editInput, flex: 1 }} />
+            <input value={newEmoji} onChange={(e) => setNewEmoji(e.target.value)} placeholder="Emoji" maxLength={2} autoComplete="off" autoCorrect="off" autoCapitalize="off" spellCheck="false" style={{ ...editInput, width: 56 }} />
+            <input value={newName} onChange={(e) => setNewName(e.target.value)} placeholder="Goal name" autoComplete="off" autoCorrect="off" autoCapitalize="off" spellCheck="false" style={{ ...editInput, flex: 1 }} />
             <input type="number" min={1} max={7} value={newTarget} onChange={(e) => setNewTarget(e.target.value)} style={{ ...editInput, width: 52 }} />
           </div>
           <div style={{ display: 'flex', gap: T.space.xs, marginBottom: T.space.sm, flexWrap: 'wrap' }}>

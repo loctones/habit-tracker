@@ -117,6 +117,10 @@ export default function SetupWizard({ onComplete, existingGoals = [] }) {
           style={{ ...inputStyle, borderColor: errors.name ? C.red : C.overlay }}
           placeholder="Goal name"
           value={name}
+          autoComplete="off"
+          autoCorrect="off"
+          autoCapitalize="off"
+          spellCheck="false"
           onChange={(e) => { setName(e.target.value); setErrors((prev) => ({ ...prev, name: undefined })); }}
         />
         {errors.name && <div style={errorStyle}>{errors.name}</div>}
@@ -131,6 +135,10 @@ export default function SetupWizard({ onComplete, existingGoals = [] }) {
             placeholder="Emoji"
             value={emoji}
             disabled={emojiSkipped}
+            autoComplete="off"
+            autoCorrect="off"
+            autoCapitalize="off"
+            spellCheck="false"
             onChange={(e) => setEmoji(e.target.value)}
             maxLength={2}
           />
